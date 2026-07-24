@@ -43,4 +43,5 @@ jobs:
         EOF
     - name: Test with pytest
       run: |
+        export $(grep -v '^#' $RUNNER_TEMP/.env | xargs)
         uv run -m pytest

@@ -9,4 +9,4 @@ if __name__ == "__main__":
         PopulateService.add_global_room()
         PopulateService.add_master()
         PopulateService.add_admin_message_types()
-    socket_io.run(app, debug=True)
+    socket_io.run(app, debug=True, allow_unsafe_werkzeug=True, host="0.0.0.0")

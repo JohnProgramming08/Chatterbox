@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 ENV secret_key="OMG I FINISHED MY A LEVELS WHOO"
-ENV database_uri="sqlite:///:memory:"
+ENV database_uri="postgresql+psycopg2://postgres:postgres@postgres_db:5432/mydb"
 ENV master_username="MASTER"
 ENV master_password="MASTER"
 
